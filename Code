@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.Random;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+    //Human input
+    Scanner sc = new Scanner (System.in);
+    System.out.print("Enter your choice 0 for rock, 1 for paper and 2 for scissor - ");
+    int human = sc.nextInt();
+    
+    //System no. generation
+    Random random = new Random();
+    int comp = random.nextInt(3);
+    System.out.println("Comp choice is - " + comp);
+    
+    // If else if ladder
+    if (human==comp){
+        System.out.println("It's a tie");
+    }
+    else if ((human == 0 && comp == 2) || (human == 1 && comp == 0) || (human == 2 && comp == 1)){
+        System.out.println("Human won");
+    }
+    else {
+        System.out.println("Comp won");
+    }
+    }
+    }
